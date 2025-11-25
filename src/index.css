@@ -117,4 +117,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  ::selection {
+    background-color: var(--muted);
+  }
+  input:-webkit-autofill,
+  textarea:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px var(--background) inset !important;
+    -webkit-text-fill-color: var(--primary) !important;
+  }
 }
