@@ -171,3 +171,12 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
