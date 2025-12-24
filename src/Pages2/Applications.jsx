@@ -1,27 +1,18 @@
-import React from "react"
-import { NavLink, Outlet } from "react-router-dom"
-import StatCard2 from "../reuseComponent/StatCard2"
-import {
-  CheckCircle,
-  Database,
-  Activity,
-  Triangle,
-} from "lucide-react"
+import React from 'react'
+import { NavLink, Outlet } from 'react-router-dom'
+import StatCard2 from '../reuseComponent/StatCard2'
+import { CheckCircle, Database, Activity, Triangle } from 'lucide-react'
 
 const Applications = () => {
-  const tabBaseClass =
-    "px-4 py-2 rounded-sm text-sm font-medium transition"
+  const tabBaseClass = 'px-4 py-2 rounded-sm text-sm font-medium transition'
 
-  const activeClass =
-    "bg-white shadow text-black"
+  const activeClass = 'bg-white shadow text-black'
 
-  const inactiveClass =
-    "text-gray-500 hover:text-black"
+  const inactiveClass = 'text-gray-500 hover:text-black'
 
   return (
     <div className="bg-gray-50 min-h-screen p-8">
       <div className="max-w-[1250px] mx-auto space-y-8">
-
         {/* ===== Header ===== */}
         <div>
           <h1 className="text-2xl font-bold">Application Progress</h1>
@@ -60,14 +51,11 @@ const Applications = () => {
 
         {/* ===== Tabs (ROUTING BASED) ===== */}
         <div className="flex gap-2 bg-gray-100 p-1 rounded-sm w-fit">
-
           <NavLink
             end
             to="/application"
             className={({ isActive }) =>
-              `${tabBaseClass} ${
-                isActive ? activeClass : inactiveClass
-              }`
+              `${tabBaseClass} ${isActive ? activeClass : inactiveClass}`
             }
           >
             All Applications (3)
@@ -76,9 +64,7 @@ const Applications = () => {
           <NavLink
             to="/application/processing"
             className={({ isActive }) =>
-              `${tabBaseClass} ${
-                isActive ? activeClass : inactiveClass
-              }`
+              `${tabBaseClass} ${isActive ? activeClass : inactiveClass}`
             }
           >
             Processing (1)
@@ -87,9 +73,7 @@ const Applications = () => {
           <NavLink
             to="/application/completed"
             className={({ isActive }) =>
-              `${tabBaseClass} ${
-                isActive ? activeClass : inactiveClass
-              }`
+              `${tabBaseClass} ${isActive ? activeClass : inactiveClass}`
             }
           >
             Completed (1)
@@ -98,9 +82,7 @@ const Applications = () => {
           <NavLink
             to="/application/pending"
             className={({ isActive }) =>
-              `${tabBaseClass} ${
-                isActive ? activeClass : inactiveClass
-              }`
+              `${tabBaseClass} ${isActive ? activeClass : inactiveClass}`
             }
           >
             Pending (1)
@@ -109,7 +91,6 @@ const Applications = () => {
 
         {/* ===== CHILD ROUTES RENDER HERE ===== */}
         <Outlet />
-
       </div>
     </div>
   )

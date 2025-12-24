@@ -1,14 +1,14 @@
-import React from "react"
-import { NavLink } from "react-router-dom"
-import { Button } from "../components/ui/button"
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { Button } from '../components/ui/button'
 
 const navItems = [
-  { name: "Overview", path: "/" },
-  { name: "Applications", path: "/application" },
-  { name: "Data Sources", path: "/datasources" },
-  { name: "RBAC & Teams", path: "/rbacteam" },
-  { name: "App Builder", path: "/appbuilder" },
-  { name: "AI Models", path: "/aimodel" },
+  { name: 'Overview', path: '/' },
+  { name: 'Applications', path: '/application' },
+  { name: 'Data Sources', path: '/datasources' },
+  { name: 'RBAC & Teams', path: '/rbacteam' },
+  { name: 'App Builder', path: '/appbuilder' },
+  { name: 'AI Models', path: '/aimodel' },
 ]
 
 const Navbar = () => {
@@ -18,9 +18,7 @@ const Navbar = () => {
       <nav className="bg-white border-b">
         <div className="px-6 py-6 flex items-center justify-between m-auto w-[1250px]">
           <div>
-            <h1 className="text-3xl font-bold">
-              Knowledge Graph Service
-            </h1>
+            <h1 className="text-3xl font-bold">Knowledge Graph Service</h1>
             <p className="text-sm text-muted-foreground">
               Build and manage your knowledge graphs at scale
             </p>
@@ -40,8 +38,8 @@ const Navbar = () => {
               className={({ isActive }) =>
                 `py-2 px-6  transition-all ${
                   isActive
-                    ? "bg-white rounded-sm text-gray-600 "
-                    : "text-gray-600 hover:bg-white-100"
+                    ? 'bg-white rounded-sm text-gray-600 '
+                    : 'text-gray-600 hover:bg-white-100'
                 }`
               }
             >
