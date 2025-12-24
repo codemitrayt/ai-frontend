@@ -1,23 +1,55 @@
-import { BrowserRouter, Routes, Route } from 'react-router'
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navbar from './components2/Navbar'
 
-import { AppLayout, AuthLayout } from './pages'
-import { HomePage, NotFoundPage, SignInPage, SignUpPage } from './pages'
+import Overview from './Pages2/Overview'
+import Applications from './Pages2/Applications'
+import DataSources from './Pages2/DataSources'
+import RBACTeam from './Pages2/RBACTeam'
+import AppBuilder from './Pages2/AppBuilder'
+import AiModels from './Pages2/AiModels'
+import ApplicationDetails from "./Pages2/ApplicationDetails"
 
-const AppRoutes = () => {
+import AvailableSources from './reuseComponent/DataSourceComponents/AvailableSources'
+import Configuration from './reuseComponent/DataSourceComponents/Configuration'
+import ConnectedSources from './reuseComponent/DataSourceComponents/ConnectedSources'
+import Processing from './reuseComponent/subCompoApplication/Processing'
+import Completed from './reuseComponent/subCompoApplication/Completed'
+import Pending from './reuseComponent/subCompoApplication/Pending'
+import AllApplications from './reuseComponent/subCompoApplication/AllApplications'
+
+const Approutes = () => {
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Routes>
-        <Route path="/" element={<AppLayout />}>
-          <Route path="auth" element={<AuthLayout />}>
-            <Route path="sign-in" element={<SignInPage />} />
-            <Route path="sign-up" element={<SignUpPage />} />
-          </Route>
-          <Route index element={<HomePage />} />
-          <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Overview />} />
+
+      <Route path="/application" element={<Applications />}>
+        {/* Tabs */}
+        <Route index element={<AllApplications />} />
+        <Route path="processing" element={<Processing />} />
+        <Route path="completed" element={<Completed />} />
+        <Route path="pending" element={<Pending />} />
+      
+        {/* Details page */}
+        <Route path=":appId" element={<ApplicationDetails />} />
+       </Route>
+
+        <Route path="/rbacteam" element={<RBACTeam />} />
+        <Route path="/appbuilder" element={<AppBuilder />} />
+        <Route path="/aimodel" element={<AiModels />} />
+
+        {/* ✅ Nested DataSources routes */}
+        <Route path="/datasources" element={<DataSources />}>
+          <Route index element={<ConnectedSources />} />
+          <Route path="available" element={<AvailableSources />} />
+          <Route path="configuration" element={<Configuration />} />
         </Route>
       </Routes>
     </BrowserRouter>
   )
 }
 
-export default AppRoutes
+export default Approutes
