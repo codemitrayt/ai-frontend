@@ -1,6 +1,6 @@
 import React from 'react'
-import RBAC from './components/RBAC_Teams'
-import DataPage from './components/data_access'
+import RBAC from './components/rbac-teams'
+import DataPage from './components/data-access'
 
 const RABCPage = () => {
   return (

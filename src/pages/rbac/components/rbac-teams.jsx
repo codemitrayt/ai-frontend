@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
 import RolesCard from './role'
 import PermissionsCard from './permissions'
-import TeamRoleCard from './teamrole'
+import TeamRoleCard from './team-role'
 
 const teamsData = [
   {
