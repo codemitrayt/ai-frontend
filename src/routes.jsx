@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-import { AppLayout, AuthLayout } from './pages'
+import { AppLayout, AuthLayout, RBACPage, BuilderPage } from './pages'
 import { HomePage, NotFoundPage, SignInPage, SignUpPage } from './pages'
 
 const AppRoutes = () => {
@@ -14,6 +14,8 @@ const AppRoutes = () => {
           </Route>
           <Route index element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
+          <Route path="test" element={<RBACPage />} />
+          <Route path="builder" element={<BuilderPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
