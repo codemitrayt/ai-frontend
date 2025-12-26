@@ -1,6 +1,6 @@
 import React from 'react'
 
- const AiModels = () => {
+const AiModels = () => {
   return (
     <div>AiModels</div>
   )

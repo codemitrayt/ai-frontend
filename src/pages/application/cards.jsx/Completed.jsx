@@ -1,5 +1,5 @@
 import React from 'react'
-import { Check } from 'lucide-react'
+import { Check, CheckCircle } from 'lucide-react'
 const Completed = () => {
   return (
     <div>
@@ -10,7 +10,7 @@ const Completed = () => {
         <div className="flex items-start gap-4">
           
           {/* Success Icon */}
-          <div className="flex items-center justify-center w-6 h-6 rounded-full border border-green-500">
+          <div className="flex mt-1 items-center justify-center w-4 h-4 rounded-full border border-green-500">
             <Check className="w-4 h-4 text-green-500 " />
           </div>
 

@@ -8,7 +8,7 @@ const navItems = [
   { name: "Data Sources", path: "/datasources" },
   { name: "RBAC & Teams", path: "/rbacteam" },
   { name: "App Builder", path: "/appbuilder" },
-  { name: "AI Models", path: "/aimodel" },
+  { name: "AI Models", path: "/aimodel/model" },
 ]
 
 const Navbar = () => {

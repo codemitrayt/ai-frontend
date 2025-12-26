@@ -1,22 +1,34 @@
-import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Navbar from './components2/Navbar'
+import React from "react"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Navbar from "./components2/Navbar"
 
-import Overview from './Pages2/Overview'
-import Applications from './Pages2/Applications'
-import DataSources from './Pages2/DataSources'
-import RBACTeam from './Pages2/RBACTeam'
-import AppBuilder from './Pages2/AppBuilder'
-import AiModels from './Pages2/AiModels'
-import ApplicationDetails from "./Pages2/ApplicationDetails"
-
-import AvailableSources from './reuseComponent/DataSourceComponents/AvailableSources'
-import Configuration from './reuseComponent/DataSourceComponents/Configuration'
-import ConnectedSources from './reuseComponent/DataSourceComponents/ConnectedSources'
-import Processing from './reuseComponent/subCompoApplication/Processing'
-import Completed from './reuseComponent/subCompoApplication/Completed'
-import Pending from './reuseComponent/subCompoApplication/Pending'
-import AllApplications from './reuseComponent/subCompoApplication/AllApplications'
+// Top-level pages
+import RBACTeam from "./Pages2/RBACTeam"
+import AppBuilder from "./Pages2/AppBuilder"
+// App pages (barrel export from ./pages)
+import {
+  Overview,
+  Application,
+  AllApplication,
+  Pending,
+  Completed,
+  Processing,
+  DataSource,
+  ConnectedSources,
+  AvailableSources,
+  Configuration,
+  AiModel,
+  ModelSelection,
+  Recommendation,
+  AllModels,
+  ByType,
+  Configurations,
+  Recommended,
+  BestPractices,
+  PerformanceComparison,
+  ByUseCase,
+  
+} from "./pages"
 
 const Approutes = () => {
   return (
@@ -24,29 +36,63 @@ const Approutes = () => {
       <Navbar />
 
       <Routes>
+        {/* ================= HOME ================= */}
         <Route path="/" element={<Overview />} />
+        <Route path="/appbuilder" element={<AppBuilder/>}/>
+        <Route path="/rbacteam" element={<RBACTeam/>}/>
 
-      <Route path="/application" element={<Applications />}>
-        {/* Tabs */}
-        <Route index element={<AllApplications />} />
-        <Route path="processing" element={<Processing />} />
-        <Route path="completed" element={<Completed />} />
-        <Route path="pending" element={<Pending />} />
+        {/* ================= APPLICATION ================= */}
+        <Route path="/application" element={<Application />}>
+          {/* Default tab */}
+          <Route index element={<AllApplication />} />
+
+          {/* Tabs */}
+          <Route path="pending" element={<Pending />} />
+          <Route path="completed" element={<Completed />} />
+          <Route path="processing" element={<Processing />} />
+        </Route>
+
+        {/* ================= AiModel ================= */}
+      <Route path="/aimodel" element={<AiModel/>}>
+
+        {/*=================== ModelSelectionSubRoutes ================= */}
+
+      <Route path="model" element={<ModelSelection/>}>
+        <Route index element={<Recommended/>}/>
+        <Route path="allmodels" element={<AllModels/>}/>
+        <Route path="bytype" element={<ByType/>}/>
+        <Route path="configuration" element={<Configurations/>}/>
+       
+      </Route>
+
+ {/* ================= Recommendation Routes ================= */}
+
+        <Route path="recommendation" element={<Recommendation/>} >
+          <Route index element={<ByUseCase/>}/>
+         <Route path="bestpractice" element={<BestPractices/>}/>
+         <Route path="performance" element={<PerformanceComparison/>}/>
+         
+        </Route>
+
+        
+        
+      </Route>
       
-        {/* Details page */}
-        <Route path=":appId" element={<ApplicationDetails />} />
-       </Route>
 
-        <Route path="/rbacteam" element={<RBACTeam />} />
-        <Route path="/appbuilder" element={<AppBuilder />} />
-        <Route path="/aimodel" element={<AiModels />} />
-
-        {/* ✅ Nested DataSources routes */}
-        <Route path="/datasources" element={<DataSources />}>
+        {/* ================= DATASOURCES ================= */}
+        <Route path="/datasources" element={<DataSource />}>
+          {/* Default tab */}
           <Route index element={<ConnectedSources />} />
+
           <Route path="available" element={<AvailableSources />} />
           <Route path="configuration" element={<Configuration />} />
         </Route>
+
+       
+      
+
+
+
       </Routes>
     </BrowserRouter>
   )
