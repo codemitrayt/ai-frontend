@@ -9,16 +9,16 @@ import Overview from "./overview"
 import Application from "./application"
 
 // Application tabs (⚠️ cards.jsx folder + singular filename)
-import AllApplication from "./application/cards.jsx/AllApplication"
-import Pending from "./application/cards.jsx/Pending"
-import Completed from "./application/cards.jsx/Completed"
-import Processing from "./application/cards.jsx/Processing"
+import AllApplication from "./application/components.jsx/All-Application"
+import Pending from "./application/components.jsx/Pending"
+import Completed from "./application/components.jsx/Completed"
+import Processing from "./application/components.jsx/Processing"
 
 // ================= DATASOURCE =================
 import DataSource from "./data-source"
-import ConnectedSources from "./data-source/cards/ConnectedSources"
-import AvailableSources from "./data-source/cards/AvailableSource"
-import Configuration from "./data-source/cards/Configuration"
+import ConnectedSources from "./data-source/components/Connected-Sources"
+import AvailableSources from "./data-source/components/Available-Source"
+import Configuration from "./data-source/components/Configuration"
 
 // ================= LAYOUTS =================
 import AppLayout from "./layout"
@@ -30,16 +30,16 @@ import ModelSelection from "./aimodel/components/modelSelection"
 import Recommendation from "./aimodel/components/recommendation"
 
 //================ModelSelectionComponent==============
-import AllModels from "./aimodel/subComponents/allModels"
-import ByType from "./aimodel/subComponents/byType"
-import Configurations from "./aimodel/subComponents/configuration"
-import Recommended from "./aimodel/subComponents/recommended"
+import AllModels from "./aimodel/sub-Components/all-Models"
+import ByType from "./aimodel/sub-Components/by-Type"
+import Configurations from "./aimodel/sub-Components/configuration"
+import Recommended from "./aimodel/sub-Components/recommended"
 
 
 //================RecommendedComponents==============
-import BestPractices from "./aimodel/recommendedComponent/bestPractice"
-import ByUseCase from "./aimodel/recommendedComponent/byUseCase"
-import PerformanceComparison from "./aimodel/recommendedComponent/performance"
+import BestPractices from "./aimodel/recommended-Component/best-Practice"
+import ByUseCase from "./aimodel/recommended-Component/by-UseCase"
+import PerformanceComparison from "./aimodel/recommended-Component/performance"
 // ================= EXPORTS =================
 export {
   HomePage,
