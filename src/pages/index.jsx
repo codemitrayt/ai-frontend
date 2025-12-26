@@ -26,14 +26,14 @@ import AuthLayout from "./auth/layout"
 
 //================= AiModel =================
 import AiModel from "./aimodel"
-import ModelSelection from "./aimodel/components/modelSelection"
+import ModelSelection from "./aimodel/components/model-Selection"
 import Recommendation from "./aimodel/components/recommendation"
 
 //================ModelSelectionComponent==============
-import AllModels from "./aimodel/sub-Components/all-Models"
-import ByType from "./aimodel/sub-Components/by-Type"
-import Configurations from "./aimodel/sub-Components/configuration"
-import Recommended from "./aimodel/sub-Components/recommended"
+import AllModels from "./aimodel/model-selection-components/all-Models"
+import ByType from "./aimodel/model-selection-components/by-Type"
+import Configurations from "./aimodel/model-selection-components/configuration"
+import Recommended from "./aimodel/model-selection-components/recommended"
 
 
 //================RecommendedComponents==============
