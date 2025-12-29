@@ -32,7 +32,7 @@ const roles = [
 
 export default function RolesCard() {
   return (
-    <div className="p-8 max-w-7xl mx-auto ">
+    <div className=" max-w-7xl mx-auto ">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {roles.map((role) => (
           <Card key={role.title}>

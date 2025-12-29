@@ -93,7 +93,7 @@ const AppCard = ({ title, desc, status, type, appId }) => {
 
 export default function ApplicationBuilderPage() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className=" max-w-7xl mx-auto">
       <div className="flex justify-between items-center mb-6">
         <div>
           <h1 className="text-2xl font-bold">Application Builder</h1>

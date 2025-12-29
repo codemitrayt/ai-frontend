@@ -1,6 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router'
 
-import { AppLayout, AuthLayout, RBACPage, BuilderPage } from './pages'
+import {
+  AppLayout,
+  AuthLayout,
+  RBACPage,
+  BuilderPage,
+  ModelManagementPage,
+} from './pages'
 import { HomePage, NotFoundPage, SignInPage, SignUpPage } from './pages'
 
 const AppRoutes = () => {
@@ -16,6 +22,7 @@ const AppRoutes = () => {
           <Route path="*" element={<NotFoundPage />} />
           <Route path="test" element={<RBACPage />} />
           <Route path="builder" element={<BuilderPage />} />
+          <Route path="model" element={<ModelManagementPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

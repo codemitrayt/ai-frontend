@@ -34,7 +34,7 @@ const LibraryItem = ({ icon, title, desc }) => (
 
 export default function VisualBuilderPage() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className=" max-w-7xl mx-auto">
       <div className="grid grid-cols-12 gap-4">
         <Card className="col-span-12 md:col-span-3">
           <CardHeader>

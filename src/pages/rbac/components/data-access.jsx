@@ -149,7 +149,7 @@ export default function DataPage() {
                       <label className="text-sm font-medium">
                         Filter by Source Type
                       </label>
-                      <SelectTrigger className="w-79">
+                      <SelectTrigger className="w-full md-w-full">
                         <SelectValue placeholder="All Types" />
                       </SelectTrigger>
                       <SelectContent>
@@ -168,7 +168,7 @@ export default function DataPage() {
                       <label className="text-sm font-medium">
                         Filter by Team
                       </label>
-                      <SelectTrigger className="w-79">
+                      <SelectTrigger className="w-full md-w-full">
                         <SelectValue placeholder="All Teams" />
                       </SelectTrigger>
                       <SelectContent>

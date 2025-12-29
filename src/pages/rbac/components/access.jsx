@@ -27,7 +27,7 @@ export default function AccessCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Data Source</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select source" />
                 </SelectTrigger>
                 <SelectContent>
@@ -46,7 +46,7 @@ export default function AccessCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Team</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select team" />
                 </SelectTrigger>
                 <SelectContent>
@@ -61,7 +61,7 @@ export default function AccessCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Role</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -129,7 +129,7 @@ export default function AccessCard() {
           ].map((rule, index) => (
             <div
               key={index}
-              className="flex items-center justify-between border rounded-lg p-4"
+              className="flex items-center justify-between border rounded-lg "
             >
               <div className="space-y-1">
                 <div className="flex items-center gap-2 font-medium">

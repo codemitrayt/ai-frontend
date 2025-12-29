@@ -26,7 +26,7 @@ const TemplateCard = ({ icon, title, desc, tag }) => {
 
 export default function TemplatesPage() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className=" max-w-7xl mx-auto">
       <Tabs defaultValue="templates">
         <TabsContent value="templates">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

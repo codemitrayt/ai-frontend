@@ -40,7 +40,7 @@ const HistoryItem = ({ title, desc, status, color }) => {
 
 export default function DeploymentPage() {
   return (
-    <div className="p-8 max-w-7xl mx-auto space-y-6">
+    <div className=" max-w-7xl mx-auto space-y-6">
       <Card>
         <CardHeader>
           <CardTitle className="font-bold text-2xl">

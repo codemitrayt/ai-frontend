@@ -25,7 +25,7 @@ export default function TeamRoleCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Select Team</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose team" />
                 </SelectTrigger>
                 <SelectContent>
@@ -41,7 +41,7 @@ export default function TeamRoleCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Select Role</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -57,7 +57,7 @@ export default function TeamRoleCard() {
             <div className="space-y-1">
               <label className="text-sm font-medium">Select Application</label>
               <Select>
-                <SelectTrigger className="w-90">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose app" />
                 </SelectTrigger>
                 <SelectContent>

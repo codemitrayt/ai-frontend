@@ -17,7 +17,7 @@ import { Switch } from '@/components/ui/switch'
 
 export default function BulkAccessCard() {
   return (
-    <div className="p-8 max-w-7xl mx-auto">
+    <div className=" max-w-7xl mx-auto">
       {' '}
       <Card className=" shadow-sm">
         {' '}
@@ -39,7 +39,7 @@ export default function BulkAccessCard() {
             <div className="space-y-2">
               <label className="text-sm font-medium">Select Team</label>
               <Select>
-                <SelectTrigger className="w-79">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose team" />
                 </SelectTrigger>
                 <SelectContent>
@@ -55,7 +55,7 @@ export default function BulkAccessCard() {
             <div className="space-y-2">
               <label className="text-sm font-medium">Select Role</label>
               <Select>
-                <SelectTrigger className="w-79">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose role" />
                 </SelectTrigger>
                 <SelectContent>
@@ -99,7 +99,7 @@ export default function BulkAccessCard() {
             <div className="space-y-2">
               <label className="text-sm font-medium">Select Source</label>
               <Select>
-                <SelectTrigger className="w-79">
+                <SelectTrigger className="w-full md-w-full">
                   <SelectValue placeholder="Choose source" />
                 </SelectTrigger>
                 <SelectContent>
